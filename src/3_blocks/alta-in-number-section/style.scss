@@ -1,0 +1,50 @@
+.alta-in-number {
+  width: 100%;
+  background-color: var(--color-primary-90);
+
+  & > h3 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(var(--font-size-medium), 5vw, var(--font-size-1));
+    text-align: center;
+    color: var(--color-neutral-0);
+    margin-bottom: var(--spacing-48);
+    margin-top: var(--spacing-64);
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-64);
+
+    &__card {
+      width: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h3 {
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-1);
+        text-align: center;
+        color: var(--color-primary-50);
+      }
+
+      & p {
+        text-align: center;
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-medium);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .alta-in-number__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-64);
+  }
+}
