@@ -294,6 +294,8 @@ const data = [
 
 const selectedOptions = {
   initialInvestissement: 100000,
+  // sectoralCategory: ["Commerces"],
+  // geographicalArea: ["France", "Europe"],
   selectedBtns: ["France", "Europe", "Commerces"]
 };
 
@@ -353,7 +355,7 @@ function displayCards(cards) {
           <p>Capitalisation : <span>${card.capitalization}</span></p>
           <p>Zone géographique : <span>${card.geographicalArea.name}</span></p>
           <p>Prix de souscription : <span>${card.subscriptionPrice}</span></p>
-          <p>${card.payoutRatio.name} : <span>${card.payoutRatio.value}</span></p>
+          <p>${card.payoutRatio.name} <span>${card.payoutRatio.value}</span></p>
         </div>
         <img src="${card.logoUrl}" alt="logo">
         <div class="scpi-selector__selectors-container__resultsCards__card__body__btns-container">
