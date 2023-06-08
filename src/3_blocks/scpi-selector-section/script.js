@@ -304,7 +304,7 @@ const labelInput = document.querySelector('.scpi-selector__selectors-container__
 
 
 inputRange.addEventListener('input', handleInputRange)
-allBtns.forEach(btn => btn.addEventListener('click', (e) => handleClick(e, selectedOptions.selectedBtns)))
+allBtns.forEach(btn => btn.addEventListener('click', (e) => handleClickSCPISelector(e, selectedOptions.selectedBtns)))
 
 function handleInputRange() {
   selectedOptions.initialInvestissement = inputRange.value
@@ -316,7 +316,7 @@ function handleInputRange() {
   displayCards(filteredCards(selectedOptions))
 }
 
-function handleClickBtn(e, selectedBtns) {
+function handleClickSCPISelector(e, selectedBtns) {
   const btnLabel = e.target.getAttribute('data-attr')
   handleSelectedOptionBtn(selectedBtns, btnLabel)
 }
