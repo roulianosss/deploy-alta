@@ -316,10 +316,10 @@ function handleInputRange() {
   // displayCards(filteredCards(selectedOptions))
 }
 
-// function handleClick(e, selectedBtns) {
-//   const btnLabel = e.target.getAttribute('data-attr')
-//   handleSelectedOptionBtn(selectedBtns, btnLabel)
-// }
+function handleClick(e, selectedBtns) {
+  const btnLabel = e.target.getAttribute('data-attr')
+  handleSelectedOptionBtn(selectedBtns, btnLabel)
+}
 
 // function handleSelectedOptionBtn(array, string) {
 //   const indexSelectedBtn = array.indexOf(string);
