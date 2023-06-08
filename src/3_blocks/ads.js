@@ -51,6 +51,7 @@ import capitalCalculatorSection from './capital-calculator-section/template.html
 import lexiqueSection from './lexique-section/template.html?raw';
 import stayInformedSection from './stay-informed-section/template.html?raw';
 import contactUsSection from './contact-us-section/template.html?raw';
+import scpiSelectorSection from './scpi-selector-section/template.html?raw';
 
 const blocks = [
   {
@@ -265,6 +266,10 @@ const blocks = [
     name: 'contactUsSection',
     drupalTemplate: 'paragraph--ap-content--contactez-nous',
     template: contactUsSection,
+  },
+  {
+    name: 'scpiSelectorSection',
+    template: scpiSelectorSection,
   }
 ];
 

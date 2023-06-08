@@ -75,13 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
         element.getAttribute("data-content").replace(/\\r\\n/g, "")
       );
       var data = JSON.parse(dataParsed);
-      //console.log('from data-content');
-      //console.log(data);
     } else {
       element.setAttribute("data-content", parsedData);
       var data = defaultData;
-      //console.log('from default data');
-      //console.log(data);
     }
     let header = data[0];
     const graphContainer = document.querySelector(
@@ -90,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
     element.innerHTML = "";
     header.forEach((donnee, i) => {
       if (i === 3) return;
-      console.log(donnee, i);
       let active =
         donnee["active"] == 1
           ? "piloted-graph-section__btns-container__btn--active"

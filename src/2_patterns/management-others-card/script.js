@@ -40,7 +40,7 @@ if (managementOthersCards) {
     });
 
     window.addEventListener('resize', function (event) {
-        console.log('resized');
+        //console.log('resized');
         const managementGuidedCards = document.querySelectorAll('.management-guided-card');
         const managementOthersCards = document.querySelectorAll('.management-others-card');
         // const productManagementCards = document.querySelectorAll('.product-management-section__content');

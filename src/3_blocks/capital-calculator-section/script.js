@@ -43,7 +43,7 @@ if (document.querySelector(".capital-calculator-section")) {
     capitalToString.splice(-3, 0, " ");
     // displayResult.textContent = `${capitalToString.join("")} €`;
     animateNumber(displayResult, capital, 500)
-    //console.log(roundnum(capital));
+
   }
 
   function animateNumber(element, endValue, duration) {

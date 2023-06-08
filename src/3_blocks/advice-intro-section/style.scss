@@ -46,15 +46,25 @@
       color: #002853;
     }
 
-    &__title .title{
-      font-family: 'Expletus Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 43px;
-      font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
-      color: #002853;
-      text-align:left;
+    &__title {
+      .title{
+        font-family: 'Expletus Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 43px;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+        color: #002853;
+        text-align:left;
+      }
+      .subtitle {
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #0666AC;
+      }
     }
   }
 

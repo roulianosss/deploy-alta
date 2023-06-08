@@ -233,7 +233,8 @@ Body
 */
 
 body {
-  background-image: url(/themes/custom/altaprofits/assets/decoration/background.png);
+  /*background-image: url(/assets/images/background.png);*/
+  background-image: url(/themes/custom/altaprofits/assets/decoration/background.png);/**/
   background-size: cover;
   background-repeat-x: no-repeat
 }
@@ -303,10 +304,11 @@ BACKOFFICE
 
 .toolbar-fixed {
   .header {
-    margin-top: 79px;
+    margin-top: 39px;
   }
 }
 .local-tasks {
+  display: flex;
   ul{
     margin: 0 auto;
   }

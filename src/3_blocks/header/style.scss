@@ -43,7 +43,15 @@
     height: 100%;
     background-color: var(--color-neutral-100);
   }
-
+  &__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--spacing-32);
+    max-width: 1350px;
+    margin: 0 auto;
+  }
   &__logo {
     z-index: 4;
     display: flex;

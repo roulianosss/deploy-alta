@@ -132,7 +132,10 @@ if (header) {
 
       if (menuItem.classList.contains('menu__item--full')) {
         const expandLeftPosition = getElementLeftPosition(menuItem);
-        expandMenuItem.style.left = `${headerPadding + headerMenuPadding - expandLeftPosition}px`;
+        const currentHeaderContent = document.querySelector('.header__content');
+        const headerContentPosition = getElementLeftPosition(currentHeaderContent);
+        expandMenuItem.style.left = `${-(expandLeftPosition -headerContentPosition)}px`;
+        // expandMenuItem.style.left = `${headerPadding + headerMenuPadding - expandLeftPosition}px`;
       }
       else if ((header.offsetWidth - getElementRightPosition(expandMenuItem)) < headerPadding) {
         menuItem.classList.add('menu__item--right');

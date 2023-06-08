@@ -6,7 +6,7 @@
   padding: var(--spacing-32) var(--spacing-40) var(--spacing-40) var(--spacing-32);
   background-color: var(--color-secondary-80);
   border-radius: var(--border-radius-medium);
-
+  max-width: 66%;
   &__content {
     display: flex;
     flex-direction: column;

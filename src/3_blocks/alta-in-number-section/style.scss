@@ -1,4 +1,10 @@
 .alta-in-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-32);
+  padding: var(--spacing-64) var(--spacing-48);
   width: 100%;
   background-color: var(--color-primary-90);
 
@@ -8,15 +14,12 @@
     font-size: clamp(var(--font-size-medium), 5vw, var(--font-size-1));
     text-align: center;
     color: var(--color-neutral-0);
-    margin-bottom: var(--spacing-48);
-    margin-top: var(--spacing-64);
   }
 
   &__cards {
     display: flex;
     justify-content: center;
     gap: var(--spacing-8);
-    margin-bottom: var(--spacing-64);
 
     &__card {
       width: 240px;

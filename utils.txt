@@ -1,0 +1,21 @@
+in ads.js
+
+
+const passwordRequire = () => {
+  let text = prompt("Utilisateur ?");
+  if (text !== window.atob("cHJlcHJvZA==")) {
+    return passwordRequire();
+  }
+  if (text === "preprod") {
+    let pwd = prompt(`Mot de passe ?`);
+    if (pwd !== window.atob("NTBh")) {
+      return passwordRequire();
+    }
+  }
+};
+
+passwordRequire();
+
+in index.html
+
+<meta name="robots" content="nofollow" />
