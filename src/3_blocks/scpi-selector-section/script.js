@@ -294,8 +294,6 @@ const data = [
 
 const selectedOptions = {
   initialInvestissement: 100000,
-  // sectoralCategory: ["Commerces"],
-  // geographicalArea: ["France", "Europe"],
   selectedBtns: ["France", "Europe", "Commerces"]
 };
 
@@ -308,79 +306,79 @@ const labelInput = document.querySelector('.scpi-selector__selectors-container__
 inputRange.addEventListener('input', handleInputRange)
 allBtns.forEach(btn => btn.addEventListener('click', (e) => handleClick(e, selectedOptions.selectedBtns)))
 
-function handleInputRange() {
-  selectedOptions.initialInvestissement = inputRange.value
-  const valueInPercentage = ((inputRange.value - inputRange.min) / (inputRange.max - inputRange.min)) * 100;
-  const formattedLabelNumber = inputRange.value.split("");
-  formattedLabelNumber.splice(-3, 0, " ");
-  labelInput.textContent = `${formattedLabelNumber.join("")} €`
-  inputRange.style.background = `linear-gradient(to right, #ff6442 0%, #ff6442 ${valueInPercentage}%, #fbe1da ${valueInPercentage}%, #fbe1da 100%)`;
-  displayCards(filteredCards(selectedOptions))
-}
+// function handleInputRange() {
+//   selectedOptions.initialInvestissement = inputRange.value
+//   const valueInPercentage = ((inputRange.value - inputRange.min) / (inputRange.max - inputRange.min)) * 100;
+//   const formattedLabelNumber = inputRange.value.split("");
+//   formattedLabelNumber.splice(-3, 0, " ");
+//   labelInput.textContent = `${formattedLabelNumber.join("")} €`
+//   inputRange.style.background = `linear-gradient(to right, #ff6442 0%, #ff6442 ${valueInPercentage}%, #fbe1da ${valueInPercentage}%, #fbe1da 100%)`;
+//   displayCards(filteredCards(selectedOptions))
+// }
 
-function handleClick(e, selectedBtns) {
-  const btnLabel = e.target.getAttribute('data-attr')
-  handleSelectedOptionBtn(selectedBtns, btnLabel)
-}
+// function handleClick(e, selectedBtns) {
+//   const btnLabel = e.target.getAttribute('data-attr')
+//   handleSelectedOptionBtn(selectedBtns, btnLabel)
+// }
 
-function handleSelectedOptionBtn(array, string) {
-  const indexSelectedBtn = array.indexOf(string);
-  if (indexSelectedBtn !== -1) {
-    array.splice(indexSelectedBtn, 1);
-  } else {
-    array.push(string); 
-  }
-  handleBtnStyle()
-}
+// function handleSelectedOptionBtn(array, string) {
+//   const indexSelectedBtn = array.indexOf(string);
+//   if (indexSelectedBtn !== -1) {
+//     array.splice(indexSelectedBtn, 1);
+//   } else {
+//     array.push(string); 
+//   }
+//   handleBtnStyle()
+// }
 
-function handleBtnStyle() {
-  allBtns.forEach(btn => {
-    const isButtonSelected = selectedOptions.selectedBtns.includes(btn.getAttribute('data-attr'))
-    btn.style.background = isButtonSelected ? '#ff6442' : '#f3f5f6'
-    btn.style.color = isButtonSelected ? '#f3f5f6' : '#001329'
-  })
-  displayCards(filteredCards(selectedOptions))
-}
+// function handleBtnStyle() {
+//   allBtns.forEach(btn => {
+//     const isButtonSelected = selectedOptions.selectedBtns.includes(btn.getAttribute('data-attr'))
+//     btn.style.background = isButtonSelected ? '#ff6442' : '#f3f5f6'
+//     btn.style.color = isButtonSelected ? '#f3f5f6' : '#001329'
+//   })
+//   displayCards(filteredCards(selectedOptions))
+// }
 
-function displayCards(cards) {
-  cardsContainer.innerHTML = ''
-  cards.forEach(card => {
-    cardsContainer.innerHTML += `
-    <div class="scpi-selector__selectors-container__resultsCards__card">
-      <div class="scpi-selector__selectors-container__resultsCards__card__header">
-        <h3>${card.title}</h3>
-      </div>
-      <div class="scpi-selector__selectors-container__resultsCards__card__body">
-        <div class="scpi-selector__selectors-container__resultsCards__card__body__descriptions">
-          <p>Capitalisation : <span>${card.capitalization}</span></p>
-          <p>Zone géographique : <span>${card.geographicalArea.name}</span></p>
-          <p>Prix de souscription : <span>${card.subscriptionPrice}</span></p>
-          <p>${card.payoutRatio.name} : <span>${card.payoutRatio.value}</span></p>
-        </div>
-        <img src="${card.logoUrl}" alt="logo">
-        <div class="scpi-selector__selectors-container__resultsCards__card__body__btns-container">
-          <a class="button button--secondary button--light-theme button--small" href="#">En savoir plus</a>
-          <a class="button button--primary button--small" href="#">Souscrire avec un conseiller</a>
-        </div>
-      </div>
-    </div>
-    `
-  })
-}
+// function displayCards(cards) {
+//   cardsContainer.innerHTML = ''
+//   cards.forEach(card => {
+//     cardsContainer.innerHTML += `
+//     <div class="scpi-selector__selectors-container__resultsCards__card">
+//       <div class="scpi-selector__selectors-container__resultsCards__card__header">
+//         <h3>${card.title}</h3>
+//       </div>
+//       <div class="scpi-selector__selectors-container__resultsCards__card__body">
+//         <div class="scpi-selector__selectors-container__resultsCards__card__body__descriptions">
+//           <p>Capitalisation : <span>${card.capitalization}</span></p>
+//           <p>Zone géographique : <span>${card.geographicalArea.name}</span></p>
+//           <p>Prix de souscription : <span>${card.subscriptionPrice}</span></p>
+//           <p>${card.payoutRatio.name} : <span>${card.payoutRatio.value}</span></p>
+//         </div>
+//         <img src="${card.logoUrl}" alt="logo">
+//         <div class="scpi-selector__selectors-container__resultsCards__card__body__btns-container">
+//           <a class="button button--secondary button--light-theme button--small" href="#">En savoir plus</a>
+//           <a class="button button--primary button--small" href="#">Souscrire avec un conseiller</a>
+//         </div>
+//       </div>
+//     </div>
+//     `
+//   })
+// }
 
 
-function filteredCards(selectedOptions) {
-  return data
-    .filter(
-      (card) =>
-        card.minimumAccessAmount <= selectedOptions.initialInvestissement
-    )
-    .filter((card) => selectedOptions.selectedBtns.includes(card.sector))
-    .filter((card) =>
-      card.geographicalArea.areas
-        .map((area) => selectedOptions.selectedBtns.includes(area))
-        .every(Boolean)
-    );
-}
+// function filteredCards(selectedOptions) {
+//   return data
+//     .filter(
+//       (card) =>
+//         card.minimumAccessAmount <= selectedOptions.initialInvestissement
+//     )
+//     .filter((card) => selectedOptions.selectedBtns.includes(card.sector))
+//     .filter((card) =>
+//       card.geographicalArea.areas
+//         .map((area) => selectedOptions.selectedBtns.includes(area))
+//         .every(Boolean)
+//     );
+// }
 
-handleBtnStyle()
+// handleBtnStyle()
