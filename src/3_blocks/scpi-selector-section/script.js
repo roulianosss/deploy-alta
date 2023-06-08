@@ -306,15 +306,15 @@ const labelInput = document.querySelector('.scpi-selector__selectors-container__
 inputRange.addEventListener('input', handleInputRange)
 allBtns.forEach(btn => btn.addEventListener('click', (e) => handleClick(e, selectedOptions.selectedBtns)))
 
-// function handleInputRange() {
-//   selectedOptions.initialInvestissement = inputRange.value
-//   const valueInPercentage = ((inputRange.value - inputRange.min) / (inputRange.max - inputRange.min)) * 100;
-//   const formattedLabelNumber = inputRange.value.split("");
-//   formattedLabelNumber.splice(-3, 0, " ");
-//   labelInput.textContent = `${formattedLabelNumber.join("")} €`
-//   inputRange.style.background = `linear-gradient(to right, #ff6442 0%, #ff6442 ${valueInPercentage}%, #fbe1da ${valueInPercentage}%, #fbe1da 100%)`;
-//   displayCards(filteredCards(selectedOptions))
-// }
+function handleInputRange() {
+  selectedOptions.initialInvestissement = inputRange.value
+  const valueInPercentage = ((inputRange.value - inputRange.min) / (inputRange.max - inputRange.min)) * 100;
+  const formattedLabelNumber = inputRange.value.split("");
+  formattedLabelNumber.splice(-3, 0, " ");
+  labelInput.textContent = `${formattedLabelNumber.join("")} €`
+  inputRange.style.background = `linear-gradient(to right, #ff6442 0%, #ff6442 ${valueInPercentage}%, #fbe1da ${valueInPercentage}%, #fbe1da 100%)`;
+  // displayCards(filteredCards(selectedOptions))
+}
 
 // function handleClick(e, selectedBtns) {
 //   const btnLabel = e.target.getAttribute('data-attr')
