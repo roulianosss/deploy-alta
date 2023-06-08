@@ -249,10 +249,10 @@ const blocks = [
     name: 'whiteBookSection',
     template: whiteBookSection,
   },
-  // {
-  //   name: 'capitalCalculatorSection',
-  //   template: capitalCalculatorSection,
-  // },
+  {
+    name: 'capitalCalculatorSection',
+    template: capitalCalculatorSection,
+  },
   {
     name: 'lexiqueSection',
     template: lexiqueSection,
