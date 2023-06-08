@@ -316,7 +316,7 @@ function handleInputRange() {
   // displayCards(filteredCards(selectedOptions))
 }
 
-function handleClick(e, selectedBtns) {
+function handleClickBtn(e, selectedBtns) {
   const btnLabel = e.target.getAttribute('data-attr')
   handleSelectedOptionBtn(selectedBtns, btnLabel)
 }
