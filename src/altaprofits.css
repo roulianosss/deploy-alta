@@ -82,7 +82,7 @@ TOKENS
   --font-family-body: 'Open Sans', sans-serif;
   --font-size-1: 2.5rem;
   --font-size-2: 2.25rem;
-  --font-size-3: 2rem;
+  --font-size-3: 28px;
   --font-size-4: 1.5rem;
   --font-size-5: 1.25rem;
   --font-size-large: 1.25rem;
@@ -130,7 +130,8 @@ a {
   color: inherit; }
 
 .main {
-  margin-top: 144px; }
+  max-width: 1400px;
+  margin: 92px auto 0; }
 
 /*
 TYPOGRAPHY
@@ -224,9 +225,11 @@ LOGO
 /*
 BACKOFFICE
  */
-.toolbar-fixed .header {
-  margin-top: 39px; }
-
+/*.toolbar-fixed {
+  .header {
+    margin-top: 76px;
+  }
+}*/
 .local-tasks {
   display: flex; }
   .local-tasks ul {

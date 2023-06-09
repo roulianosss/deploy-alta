@@ -1,7 +1,9 @@
 .header {
   $header: &;
+  margin: 0 auto;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -9,13 +11,10 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: var(--spacing-32);
-  padding: var(--spacing-24) var(--spacing-64);
+  padding: var(--spacing-24) 0;
   background-color: var(--color-neutral-100);
   box-shadow: 0 4px 20px rgba(11, 16, 21, 0.04);
 
-  @media screen and (max-width: 1280px) {
-    padding: var(--spacing-24) var(--spacing-32);
-  }
 
   &__overlay {
     z-index: 1;
@@ -43,15 +42,47 @@
     height: 100%;
     background-color: var(--color-neutral-100);
   }
-  &__content{
+
+  &__content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: var(--spacing-32);
-    max-width: 1350px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin:0 auto;
+    padding: 0 0 0 var(--spacing-64);
   }
+
+  .hero-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 var(--spacing-64);
+    width: 100%;
+    min-height: 24vh
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__content {
+      padding:0 var(--spacing-64);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      padding:0 var(--spacing-40)
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__content {
+      padding:0 var(--spacing-24)
+    }
+  }
+
+
   &__logo {
     z-index: 4;
     display: flex;

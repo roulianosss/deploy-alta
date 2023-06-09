@@ -5,7 +5,10 @@
   justify-content: center;
   gap: var(--spacing-48);
   padding: var(--spacing-64) var(--spacing-24);
-  width: 100%;
+  /*width: 100%;*/
+  width: 100vw;
+  translate: -50%;
+  margin-left: 50%;
   background-color: var(--color-neutral-0);
 
   &__title {

@@ -45,7 +45,7 @@ const data = [
       value: "5,36%"
     },
     minimumAccessAmount: 2030,
-    logoUrl: "./assets/logos/la_francaise.png"
+    logoUrl: "./assets/logos/primonial.png"
   },
   {
     title: "PF HOSPITALITE EUROPE",
@@ -61,7 +61,7 @@ const data = [
       value: "5,36%"
     },
     minimumAccessAmount: 1000,
-    logoUrl: "./assets/logos/la_francaise.png"
+    logoUrl: "./assets/logos/perial.png"
   },
   {
     title: "PRIMOFAMILY",
@@ -77,7 +77,7 @@ const data = [
       value: "5,36%"
     },
     minimumAccessAmount: 2040,
-    logoUrl: "./assets/logos/la_francaise.png"
+    logoUrl: "./assets/logos/primonial.png"
   },
   {
     title: "VENDOME REGIONS",
@@ -143,7 +143,7 @@ const data = [
       value: "5,36%"
     },
     minimumAccessAmount: 1025,
-    logoUrl: "./assets/logos/la_francaise.png"
+    logoUrl: "./assets/logos/swisslife.png"
   },
   {
     title: "EPARGNE FONCIERE",
@@ -207,7 +207,7 @@ const data = [
       value: "4,91%"
     },
     minimumAccessAmount: 2370,
-    logoUrl: "./assets/logos/la_francaise.png"
+    logoUrl: "./assets/logos/sofidy.png"
   },
   {
     title: "PRIMOPIERRE",
@@ -271,7 +271,7 @@ const data = [
       value: "4,42%%"
     },
     minimumAccessAmount: 1360,
-    logoUrl: "./assets/logos/perial.png"
+    logoUrl: "./assets/logos/sofidy.png"
   },
   {
     title: "ACTIVIMMO",

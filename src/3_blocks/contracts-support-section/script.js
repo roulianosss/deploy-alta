@@ -1,4 +1,4 @@
-if (document.querySelector(".contracts-support-section-container")) {
+if (document.querySelector(".contracts-support-section")) {
   
 // mock-data
     const data = {
@@ -117,8 +117,8 @@ if (document.querySelector(".contracts-support-section-container")) {
 
 //objet qui enregistre les choix de l'utilisateur
     const userChoices = {
-        firstChoice: "",
-        secondChoice: "",
+        firstChoice: "assuranceVie",
+        secondChoice: "altaprofitsVie",
         thirdChoice: ""
     }
 

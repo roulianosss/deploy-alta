@@ -17,6 +17,7 @@ import brochureSection from './brochure-section/template.html?raw';
 import sincePartnerSection from './since-partner-section/template.html?raw';
 import premiumPartnerSection from './premium-partner-section/template.html?raw';
 import linksSection from './links-section/template.html?raw';
+import whiteBookSection from './white-book-section/template.html?raw';
 import productIntroSection from './product-intro-section/template.html?raw';
 import productContractualDocumentationSection from './product-contractual-documentation-section/template.html?raw';
 import productManagementSection from './product-management-section/template.html?raw';
@@ -46,11 +47,11 @@ import discoverOurJobSection from './discover-our-job-section/template.html?raw'
 import joinTheTeamSection from './join-the-team-section/template.html?raw';
 import pilotedGraphSection from './piloted-graph-section/template.html?raw';
 import tabsNavigationSection from './tabs-navigation-section/template.html?raw';
-import whiteBookSection from './white-book-section/template.html?raw';
 import capitalCalculatorSection from './capital-calculator-section/template.html?raw';
 import lexiqueSection from './lexique-section/template.html?raw';
 import stayInformedSection from './stay-informed-section/template.html?raw';
 import contactUsSection from './contact-us-section/template.html?raw';
+import paragrapheSection from './paragraphe-section/template.html?raw';
 import scpiSelectorSection from './scpi-selector-section/template.html?raw';
 
 const blocks = [
@@ -145,6 +146,10 @@ const blocks = [
   {
     name: 'linksSection',
     template: linksSection,
+  },
+  {
+    name: 'whiteBookSection',
+    template: whiteBookSection,
   },
   {
     name: 'productContractualDocumentationSection',
@@ -246,10 +251,6 @@ const blocks = [
     template: pilotedGraphSection,
   },
   {
-    name: 'whiteBookSection',
-    template: whiteBookSection,
-  },
-  {
     name: 'capitalCalculatorSection',
     template: capitalCalculatorSection,
   },
@@ -266,6 +267,10 @@ const blocks = [
     name: 'contactUsSection',
     drupalTemplate: 'paragraph--ap-content--contactez-nous',
     template: contactUsSection,
+  },
+  {
+    name: 'paragrapheSection',
+    template: paragrapheSection,
   },
   {
     name: 'scpiSelectorSection',

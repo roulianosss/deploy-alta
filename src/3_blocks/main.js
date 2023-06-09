@@ -12,3 +12,27 @@ import "./piloted-graph-section/script.js"
 import "./capital-calculator-section/script.js"
 import "./promo-banner/script.js"
 import "./scpi-selector-section/script.js"
+
+const admintoolbar = document.querySelectorAll('.toolbar-bar');
+for (let i = 0;
+     i < admintoolbar.length;
+     i++) {
+    const adminbar = admintoolbar[i];
+    const adminbarHeight = adminbar.offsetHeight;
+    if(adminbarHeight){
+        const header = document.querySelectorAll('header');
+        for (let i = 0;
+             i < header.length;
+             i++) {
+            const headerbar = header[i];
+            headerbar.style.top = adminbarHeight + 'px';
+        }
+        const main = document.querySelectorAll('main');
+        for (let i = 0;
+             i < main.length;
+             i++) {
+            const mainBalise = main[i];
+            mainBalise.style.marginTop = '143px';
+        }
+    }
+}

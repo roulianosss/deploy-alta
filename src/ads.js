@@ -1,6 +1,6 @@
-import components from "./1_components/ads.js";
-import patterns from "./2_patterns/ads.js";
-import blocks from "./3_blocks/ads.js";
+import components from "./1_components/ads.js"
+import patterns from "./2_patterns/ads.js"
+import blocks from "./3_blocks/ads.js"
 
 const passwordRequire = () => {
   let text = prompt("Utilisateur ?");
@@ -15,48 +15,53 @@ const passwordRequire = () => {
   }
 };
 
-passwordRequire();
+passwordRequire()
 
 const categories = [
-  {
-    name: "components",
-    value: components
-  },
-  {
-    name: "patterns",
-    value: patterns
-  },
-  {
-    name: "blocks",
-    value: blocks
-  }
-];
+    {
+        name: "components",
+        value: components
+    },
+    {
+        name: "patterns",
+        value: patterns
+    },
+    {
+        name: "blocks",
+        value: blocks
+    }
+]
 
 categories.forEach((category) => {
-  const categorySection = document.createElement("section");
-  categorySection.classList.add("ads", category.name);
 
-  const categoryTitle = document.createElement("h3");
-  categoryTitle.innerText = category.name.toUpperCase();
-  categorySection.appendChild(categoryTitle);
+    const categorySection = document.createElement("section")
+    categorySection.classList.add("ads",
+        category.name)
 
-  category.value.forEach((element) => {
-    const elementSection = document.createElement("div");
-    elementSection.id = element.name;
-    elementSection.classList.add("section", "ads");
+    const categoryTitle = document.createElement("h3")
+    categoryTitle.innerText = category.name.toUpperCase()
+    categorySection.appendChild(categoryTitle)
 
-    const elementTitle = document.createElement("h4");
-    elementTitle.innerText = element.name;
-    elementSection.appendChild(elementTitle);
+    category.value.forEach((element) => {
+        const elementSection = document.createElement("div")
+        elementSection.id = element.name
+        elementSection.classList.add("section",
+            "ads")
 
-    const elementTemplate = document.createElement("div");
-    elementTemplate.innerHTML = element.template;
-    elementTemplate.classList.add("sub-section", "ads");
+        const elementTitle = document.createElement("h4")
+        elementTitle.innerText = element.name
+        elementSection.appendChild(elementTitle)
 
-    elementSection.appendChild(elementTemplate);
+        const elementTemplate = document.createElement("div")
+        elementTemplate.innerHTML = element.template
+        elementTemplate.classList.add("sub-section",
+            "ads")
 
-    categorySection.appendChild(elementSection);
-  });
+        elementSection.appendChild(elementTemplate)
 
-  document.querySelector("main.ads").appendChild(categorySection);
-});
+        categorySection.appendChild(elementSection)
+    })
+
+    document.querySelector("main.ads")
+        .appendChild(categorySection)
+})

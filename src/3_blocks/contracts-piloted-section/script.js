@@ -1,615 +1,690 @@
-if (document.querySelector(".contracts-piloted-section-container")) {
-  // mock-data
-  const data = {
-    assuranceVie: {
-      titresVie: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 8,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.13%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 1",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-5.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 2",
-            srri: 3,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-3%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 3",
-            srri: 3,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-3%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 1",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-5.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      },
-      altaprofitsVie: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 1",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-5.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 2",
-            srri: 7,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-4.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 3",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-9.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 1",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-5.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      },
-      digitalViePrime: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      },
-      espaceLuxVie: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 1",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-5.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 2",
-            srri: 3,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-3%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          },
-          {
-            title: "Profil 1",
-            srri: 6,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-5.53%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      }
-    },
-    capitalisation: {
-      titreCapi: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      },
-      altaprofitsCapitalisation: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      },
-      digitalCapiPrime: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      }
-    },
-    planEpargneRetraite: {
-      titrePER: {
-        prudent: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        balanced: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ],
-        dynamic: [
-          {
-            title: "Carte Blanche",
-            srri: 5,
-            ytd: "",
-            nOne: "",
-            perfThreeYears: "",
-            perfFiveYears: "",
-            perf: "",
-            volatility: "",
-            name: "Lazard Frères Gestion",
-            percentageRate: "-7.33%",
-            informations: "Performances cumulées sur 5 ans",
-            iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
-          }
-        ]
-      }
+if (document.querySelector(".contracts-piloted-section")) {
+    // mock-data
+    const data = {
+        assuranceVie: {
+            titresVie: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 8,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.13%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 1",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-5.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 2",
+                        srri: 3,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-3%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 3",
+                        srri: 3,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-3%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 1",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-5.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            },
+            altaprofitsVie: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 1",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-5.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 2",
+                        srri: 7,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-4.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 3",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-9.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 1",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-5.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            },
+            digitalViePrime: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            },
+            espaceLuxVie: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 1",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-5.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 2",
+                        srri: 3,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-3%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    },
+                    {
+                        title: "Profil 1",
+                        srri: 6,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-5.53%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            }
+        },
+        capitalisation: {
+            titreCapi: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            },
+            altaprofitsCapitalisation: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            },
+            digitalCapiPrime: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            }
+        },
+        planEpargneRetraite: {
+            titrePER: {
+                prudent: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                balanced: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ],
+                dynamic: [
+                    {
+                        title: "Carte Blanche",
+                        srri: 5,
+                        ytd: "",
+                        nOne: "",
+                        perfThreeYears: "",
+                        perfFiveYears: "",
+                        perf: "",
+                        volatility: "",
+                        name: "Lazard Frères Gestion",
+                        percentageRate: "-7.33%",
+                        informations: "Performances cumulées sur 5 ans",
+                        iconUrl: "./assets/logos/lazard_freres_gestion--fit.svg"
+                    }
+                ]
+            }
+        }
+    };
+
+    const btnsFirstChoice = document.querySelectorAll(
+        ".btns-container__first-choice-container__btn"
+    );
+    const btnsSecondChoiceContainer = document.querySelector(
+        ".btns-container__second-choice-container"
+    );
+    const btnsSecondChoice = document.querySelectorAll(
+        ".btns-container__second-choice-container__btns-type-second-choice-container__btn"
+    );
+    const btnsThirdChoice = document.querySelectorAll(
+        ".filters-container__btns-container__btn"
+    );
+    const btnsTypeSecondChoiceContainer = document.querySelectorAll(
+        ".btns-container__second-choice-container__btns-type-second-choice-container"
+    );
+    const resultsContainer = document.querySelector(".results-container");
+    const btnsParameters = document.querySelectorAll(".toggle-button");
+    const allCards = document.querySelectorAll(".card-container, .grid-row-body");
+    const cardsContainer = document.querySelector(".cards-display-container");
+    const arrayContainer = document.querySelector(".array-display-container");
+    const allArrayRows = document.querySelectorAll(".grid-row-body");
+
+    const distributionFundsArray = document.querySelector(
+        ".distribution-funds-array-section__btn"
+    );
+
+    distributionFundsArray.addEventListener("click", handleClick);
+
+    function handleClick() {
+        console.dir(this);
+        if (this.nextElementSibling.style.maxHeight) {
+            console.dir(this.nextElementSibling);
+            this.nextElementSibling.style.maxHeight = "";
+            this.lastElementChild.style.transform = "rotate(0deg)";
+        } else {
+            const contentHeight = this.nextElementSibling.scrollHeight;
+            this.nextElementSibling.style.maxHeight = `${contentHeight}px`;
+            this.lastElementChild.style.transform = "rotate(180deg)";
+        }
     }
-  };
 
-  const btnsFirstChoice = document.querySelectorAll(
-    ".btns-container__first-choice-container__btn"
-  );
-  const btnsSecondChoiceContainer = document.querySelector(
-    ".btns-container__second-choice-container"
-  );
-  const btnsSecondChoice = document.querySelectorAll(
-    ".btns-container__second-choice-container__btns-type-second-choice-container__btn"
-  );
-  const btnsThirdChoice = document.querySelectorAll(
-    ".filters-container__btns-container__btn"
-  );
-  const btnsTypeSecondChoiceContainer = document.querySelectorAll(
-    ".btns-container__second-choice-container__btns-type-second-choice-container"
-  );
-  const resultsContainer = document.querySelector(".results-container");
-  const btnsParameters = document.querySelectorAll(".toggle-button");
-  const allCards = document.querySelectorAll(".card-container, .grid-row-body");
-  const cardsContainer = document.querySelector(".cards-display-container");
-  const arrayContainer = document.querySelector(".array-display-container");
-  const allArrayRows = document.querySelectorAll(".grid-row-body");
 
-  const distributionFundsArray = document.querySelector(
-    ".distribution-funds-array-section__btn"
-  );
 
-  distributionFundsArray.addEventListener("click", handleClick);
+    // Récupérer l'ancre de l'URL
+    var firstElementKey = "assuranceVie";
+    var secondElementKey = "altaprofitsVie";
+    var thirdElementKey = "balanced";
 
-  function handleClick() {
-    console.dir(this);
-    if (this.nextElementSibling.style.maxHeight) {
-      console.dir(this.nextElementSibling);
-      this.nextElementSibling.style.maxHeight = "";
-      this.lastElementChild.style.transform = "rotate(0deg)";
-    } else {
-      const contentHeight = this.nextElementSibling.scrollHeight;
-      this.nextElementSibling.style.maxHeight = `${contentHeight}px`;
-      this.lastElementChild.style.transform = "rotate(180deg)";
+    var url = window.location.href;
+    var anchor = url.split('#')[1];
+    if (anchor) {
+        var parts = anchor.split('-');
+        if (Array.isArray(parts) && parts.length > 0 && parts[0] === "contrat") {
+            var firstElementKey = Object.keys(data)[parseInt(parts[1]-1)];
+            var firstElementValue = data[firstElementKey];
+            var firstElementChoice = document.querySelector('div.btns-container__first-choice-container__btn[data-attr="' + firstElementKey + '"]');
+            if (firstElementChoice) {
+                console.log(firstElementKey);
+                console.log(firstElementValue);
+                console.log(firstElementChoice);
+                //setActiveBtnFirstChoice(firstElementChoice);
+                /*firstElementChoice.classList.add('active');
+                var clicEvent = new MouseEvent('click', {
+                    view: window,
+                    bubbles: true,
+                    cancelable: true
+                });
+
+                firstElementChoice.dispatchEvent(clicEvent);*/
+            } else {
+                firstElementChoice = "";
+            }
+            var secondElementKey = Object.keys(firstElementValue)[parseInt(parts[2]-1)];
+            var secondElementValue = data[firstElementKey][secondElementKey];
+            var secondElementChoice = document.querySelector('div.btns-container__second-choice-container__btns-type-second-choice-container__btn[data-attr="' + secondElementKey + '"]');
+
+            console.log(secondElementKey);
+            console.log(secondElementValue);
+            console.log(secondElementChoice);
+            console.log(11);
+            if (secondElementChoice) {
+                console.log(2);
+                //secondElementChoice.classList.add('active');
+               // setActiveBtnSecondChoice(secondElementChoice);
+            } else {
+                secondElementChoice = "";
+            }
+            var thirdElementKey = Object.keys(secondElementValue)[parseInt(parts[3]-1)];
+            var thirdElementValue = data[firstElementKey][secondElementKey][thirdElementKey];
+            var thirdElementChoice = document.querySelector('div.filters-container__btns-container__btn[data-attr="' + thirdElementKey + '"]');
+
+            if (thirdElementChoice) {
+                console.log(thirdElementKey);
+                console.log(thirdElementValue);
+                console.log(thirdElementChoice);
+                //thirdElementChoice.classList.add('active');
+                //setActiveBtnThridChoice(thirdElementChoice);
+            } else {
+                thirdElementChoice = "prudent";
+            }
+        }    //objet qui enregistre les choix de l'utilisateur
+        const userChoices = {
+            firstChoice: firstElementKey,
+            secondChoice: secondElementKey,
+            thirdChoice: thirdElementKey
+        };
+        /*
+        if(parseInt(parts[1])+parseInt(parts[2])+parseInt(parts[3]) >= 3){
+            var resultContainerDiv = document.querySelector('.filters-container');
+
+            if (resultContainerDiv) {
+                console.log(resultContainerDiv);
+                resultContainerDiv.setAttribute("name", "contrat-"+parts[1]+"-"+parts[2]+"-"+parts[3]);
+            }
+
+        }*/
     }
-  }
-
-  //objet qui enregistre les choix de l'utilisateur
-  const userChoices = {
-    firstChoice: "",
-    secondChoice: "",
-    thirdChoice: "prudent"
-  };
+    const userChoices = {
+        firstChoice: firstElementKey,
+        secondChoice: secondElementKey,
+        thirdChoice: thirdElementKey
+    };
 
   //Mise en place des events listener
   btnsFirstChoice.forEach((btn) =>
@@ -629,127 +704,135 @@ if (document.querySelector(".contracts-piloted-section-container")) {
   );
   // allArrayRows.forEach((row) => row.addEventListener("click", () => setActiveRow(row)))
 
-  //fonction au clic du premier choix
-  const setActiveBtnFirstChoice = (btn) => {
-    userChoices.secondChoice = "";
-    btnsSecondChoice.forEach((btn) =>
-      btn.classList.remove(
-        "btns-container__second-choice-container__btns-type-second-choice-container__btn--active"
-      )
-    );
-    btnsFirstChoice.forEach((btn) =>
-      btn.classList.remove(
-        "btns-container__first-choice-container__btn--active"
-      )
-    );
-    btnsTypeSecondChoiceContainer.forEach((btn) => btn.classList.add("hidden"));
-    btn.classList.add("btns-container__first-choice-container__btn--active");
-    userChoices.firstChoice = btn.getAttribute("data-attr");
-    btnsSecondChoiceContainer.classList.remove("hidden");
-    document
-      .querySelector(`.${btn.getAttribute("data-attr")}`)
-      .classList.remove("hidden");
-    displayCards();
-  };
+    //fonction au clic du premier choix
+    const setActiveBtnFirstChoice = (btn) => {
+        console.log(userChoices);
+        //userChoices.secondChoice = "";
+        btnsSecondChoice.forEach((btn) =>
+            btn.classList.remove(
+                "btns-container__second-choice-container__btns-type-second-choice-container__btn--active"
+            )
+        );
+        btnsFirstChoice.forEach((btn) =>
+            btn.classList.remove(
+                "btns-container__first-choice-container__btn--active"
+            )
+        );
+        btnsTypeSecondChoiceContainer.forEach((btn) => btn.classList.add("hidden"));
+        btn.classList.add("btns-container__first-choice-container__btn--active");
+        userChoices.firstChoice = btn.getAttribute("data-attr");
+        btnsSecondChoiceContainer.classList.remove("hidden");
+        document
+            .querySelector(`.${btn.getAttribute("data-attr")}`)
+            .classList.remove("hidden");
+        displayCards();
+    };
 
-  //fonction au clic du deuxieme choix
-  const setActiveBtnSecondChoice = (btn) => {
-    btnsSecondChoice.forEach((btn) =>
-      btn.classList.remove(
-        "btns-container__second-choice-container__btns-type-second-choice-container__btn--active"
-      )
-    );
-    userChoices.secondChoice = btn.getAttribute("data-attr");
-    btn.classList.add(
-      "btns-container__second-choice-container__btns-type-second-choice-container__btn--active"
-    );
-    displayCards();
-  };
+    //fonction au clic du deuxieme choix
+    const setActiveBtnSecondChoice = (btn) => {
+        btnsSecondChoice.forEach((btn) =>
+            btn.classList.remove(
+                "btns-container__second-choice-container__btns-type-second-choice-container__btn--active"
+            )
+        );
+        userChoices.secondChoice = btn.getAttribute("data-attr");
+        btn.classList.add(
+            "btns-container__second-choice-container__btns-type-second-choice-container__btn--active"
+        );
+        displayCards();
+    };
 
-  //fonction au clic du troisième choix
-  const setActiveBtnThridChoice = (btn) => {
-    userChoices.thirdChoice = btn.getAttribute("data-attr");
-    btnsThirdChoice.forEach((btn) =>
-      btn.classList.remove("filters-container__btns-container__btn--active")
-    );
-    btn.classList.add("filters-container__btns-container__btn--active");
-    displayCards();
-  };
+    //fonction au clic du troisième choix
+    const setActiveBtnThridChoice = (btn) => {
+        userChoices.thirdChoice = btn.getAttribute("data-attr");
+        btnsThirdChoice.forEach((btn) =>
+            btn.classList.remove("filters-container__btns-container__btn--active")
+        );
+        btn.classList.add("filters-container__btns-container__btn--active");
+        var targetAnchor = document.getElementById('filter-ancre');
+        if (targetAnchor) {
+            var targetPosition = targetAnchor.getBoundingClientRect().top;
+            window.scrollTo({
+                top: window.pageYOffset + targetPosition -350,// - 300
+                behavior: 'smooth'
+            });
+        }
 
-  //fonction qui affiche les cards
-  const displayCards = () => {
-    if (userChoices.firstChoice !== "" && userChoices.secondChoice !== "") {
-      resultsContainer.classList.remove("hidden");
-    } else {
-      resultsContainer.classList.add("hidden");
-    }
-    arrayContainer.innerHTML = ``;
-    cardsContainer.innerHTML = ``;
-    const dataUserSelected =
-      data[userChoices.firstChoice][userChoices.secondChoice][
-        userChoices.thirdChoice
-      ];
-    dataUserSelected.map(
-      (card) =>
-        (cardsContainer.innerHTML += `
+        displayCards();
+    };
+
+    //fonction qui affiche les cards
+    const displayCards = () => {
+        if (userChoices.firstChoice !== "" && userChoices.secondChoice !== "") {
+            resultsContainer.classList.remove("hidden");
+        } else {
+            resultsContainer.classList.add("hidden");
+        }
+        arrayContainer.innerHTML = ``;
+        cardsContainer.innerHTML = ``;
+        const dataUserSelected =
+            data[userChoices.firstChoice][userChoices.secondChoice][userChoices.thirdChoice];
+        dataUserSelected.map(
+            (card) =>
+                (cardsContainer.innerHTML += `
             <div class="card-container">
               <div class="card-container__card-header">
                 <p class="card-container__card-header__title">${card.title}</p>
                 <div class="card-container__card-header__numbers-rating-container">
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 1
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">1</p>
                   </div>
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 2
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">2</p>
                   </div>
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 3
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">3</p>
                   </div>
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 4
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">4</p>
                   </div>
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 5
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">5</p>
                   </div>
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 6
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">6</p>
                   </div>
                   <div class="card-container__card-header__numbers-rating-container__number-rating-container ${
                     card.srri === 7
-                      ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
-                      : ""
-                  }">
+                        ? "card-container__card-header__numbers-rating-container__number-rating-container--active"
+                        : ""
+                }">
                     <p class="card-container__card-header__numbers-rating-container__number-rating-container__number-rating">7</p>
                   </div>
                 </div>
               </div>
               <div class="card-container__card-informations">
                 <p class="card-container__card-informations__percentage-rate">${
-                  card.percentageRate
+                    card.percentageRate
                 }</p>
                 <p class="card-container__card-informations__card-information-text">
                   ${card.informations}
@@ -760,8 +843,8 @@ if (document.querySelector(".contracts-piloted-section-container")) {
               </div>
             </div>
     `)
-    );
-    arrayContainer.innerHTML += `
+        );
+        arrayContainer.innerHTML += `
                 <div class="grid-container">
                   <div class="grid-container__grid-header">
                     <div>
@@ -796,9 +879,9 @@ if (document.querySelector(".contracts-piloted-section-container")) {
                 </div>
     `;
 
-    dataUserSelected.map(
-      (row) =>
-        (arrayContainer.innerHTML += `
+        dataUserSelected.map(
+            (row) =>
+                (arrayContainer.innerHTML += `
                 <div class="grid-row-body">
                   <div class="grid-row-body__grid-profil-item-container">
                     <h3>${row.title}</h3>
@@ -827,9 +910,9 @@ if (document.querySelector(".contracts-piloted-section-container")) {
                   </div>
                 </div>
     `)
-    );
+        );
 
-    arrayContainer.innerHTML += `
+        arrayContainer.innerHTML += `
         <div class="grid-container-mobile">
           <div class="grid-container-mobile__grid-header">
             <div class="grid-container-mobile__grid-header__whiteLabel">
@@ -922,9 +1005,9 @@ if (document.querySelector(".contracts-piloted-section-container")) {
         </div>
 `;
 
-    dataUserSelected.map(
-      (row) =>
-        (arrayContainer.innerHTML += `
+        dataUserSelected.map(
+            (row) =>
+                (arrayContainer.innerHTML += `
               <div class="grid-row-body-mobile">
                 <div class="grid-row-body-mobile__grid-profil-label-container">
                   <h3>${row.title}</h3>
@@ -956,104 +1039,115 @@ if (document.querySelector(".contracts-piloted-section-container")) {
                 
               </div>
   `)
-    );
+        );
 
-    document
-      .querySelectorAll(
-        ".grid-container-mobile__grid-header__items div div:first-child"
-      )
-      .forEach((item) =>
-        item.addEventListener("click", () => handleChangeMobileLabel("prev"))
-      );
-    document
-      .querySelectorAll(
-        ".grid-container-mobile__grid-header__items div div:last-child"
-      )
-      .forEach((item) =>
-        item.addEventListener("click", () => handleChangeMobileLabel("next"))
-      );
-    document
-      .querySelectorAll(".card-container, .grid-row-body")
-      .forEach((card) =>
-        card.addEventListener("click", () => setActiveCard(card))
-      );
-  };
+        document
+            .querySelectorAll(
+                ".grid-container-mobile__grid-header__items div div:first-child"
+            )
+            .forEach((item) =>
+                item.addEventListener("click", () => handleChangeMobileLabel("prev"))
+            );
+        document
+            .querySelectorAll(
+                ".grid-container-mobile__grid-header__items div div:last-child"
+            )
+            .forEach((item) =>
+                item.addEventListener("click", () => handleChangeMobileLabel("next"))
+            );
+        document
+            .querySelectorAll(".card-container, .grid-row-body")
+            .forEach((card) =>
+                card.addEventListener("click", () => setActiveCard(card))
+            );
+    };
 
-  let percentageLevel = 0;
-  const handleChangeMobileLabel = (percentage) => {
-    if (percentage === "prev" && percentageLevel !== 0) {
-      percentageLevel += 100;
-    } else if (percentage === "prev" && percentageLevel === 0) {
-      percentageLevel = -600
-      console.log(percentageLevel);
-
-    }
-    if (percentage === "next" && percentageLevel > -600) {
-      percentageLevel -= 100;
-    } else if (percentage === "next" && percentageLevel <= -600)  {
-      percentageLevel = 0
-    }
-    console.log(`translate(${percentageLevel}%)`);
-    const allLabel = document.querySelectorAll(
-      ".grid-container-mobile__grid-header__items__label-container"
-    );
-    allLabel.forEach(
-      (label) => (label.style.transform = `translate(${percentageLevel}%)`)
-    );
-    const allRows = document.querySelectorAll(
-      ".grid-row-body-mobile__grid-profil-items-container__item-container"
-    );
-    allRows.forEach(
-      (row) => (row.style.transform = `translate(${percentageLevel}%)`)
-    );
-  };
-
-  //fonction pour passer de l'affichage cards au tableau
-  const setActiveBtnParameter = (btn) => {
-    btnsParameters.forEach((btn) => {
-      btn.classList.toggle("toggle-button--active");
-    });
-    displayResult();
-  };
-
-  //fonction pour afficher la card cliqué
-  const setActiveCard = (card) => {
-    displayResult();
-    document
-      .querySelectorAll(".card-container, .grid-row-body")
-      .forEach((card) => card.classList.remove("card-container--active"));
-    card.classList.add("card-container--active");
-  };
-
-  //affichage des resultat des choix utilisateur
-  const displayResult = () => {
-    btnsParameters.forEach((btn) => {
-      if (
-        btn.classList.contains("btn-parameter1") &&
-        btn.classList.contains("toggle-button--active")
-      ) {
-        cardsContainer.classList.remove("hidden");
-      } else {
-        if (
-          btn.classList.contains("btn-parameter1") &&
-          !btn.classList.contains("toggle-button--active")
-        ) {
-          cardsContainer.classList.add("hidden");
+    if(anchor){
+        if(firstElementKey && firstElementChoice){
+            setActiveBtnFirstChoice(firstElementChoice);
         }
-      }
-      if (
-        btn.classList.contains("btn-parameter2") &&
-        btn.classList.contains("toggle-button--active")
-      ) {
-        arrayContainer.classList.remove("hidden");
-      } else {
-        if (
-          btn.classList.contains("btn-parameter2") &&
-          !btn.classList.contains("toggle-button--active")
-        ) {
-          arrayContainer.classList.add("hidden");
+        if(secondElementKey && secondElementChoice){
+            setActiveBtnSecondChoice(secondElementChoice);
         }
-      }
-    });
-  };
+        if(thirdElementKey && thirdElementChoice){
+            setActiveBtnThridChoice(thirdElementChoice);
+        }
+    }
+    let percentageLevel = 0;
+    const handleChangeMobileLabel = (percentage) => {
+        if (percentage === "prev" && percentageLevel !== 0) {
+            percentageLevel += 100;
+        } else if (percentage === "prev" && percentageLevel === 0) {
+            percentageLevel = -600
+            console.log(percentageLevel);
+
+        }
+        if (percentage === "next" && percentageLevel > -600) {
+            percentageLevel -= 100;
+        } else if (percentage === "next" && percentageLevel <= -600) {
+            percentageLevel = 0
+        }
+        console.log(`translate(${percentageLevel}%)`);
+        const allLabel = document.querySelectorAll(
+            ".grid-container-mobile__grid-header__items__label-container"
+        );
+        allLabel.forEach(
+            (label) => (label.style.transform = `translate(${percentageLevel}%)`)
+        );
+        const allRows = document.querySelectorAll(
+            ".grid-row-body-mobile__grid-profil-items-container__item-container"
+        );
+        allRows.forEach(
+            (row) => (row.style.transform = `translate(${percentageLevel}%)`)
+        );
+    };
+
+    //fonction pour passer de l'affichage cards au tableau
+    const setActiveBtnParameter = (btn) => {
+        btnsParameters.forEach((btn) => {
+            btn.classList.toggle("toggle-button--active");
+        });
+        displayResult();
+    };
+
+    //fonction pour afficher la card cliqué
+    const setActiveCard = (card) => {
+        displayResult();
+        document
+            .querySelectorAll(".card-container, .grid-row-body")
+            .forEach((card) => card.classList.remove("card-container--active"));
+        card.classList.add("card-container--active");
+    };
+
+    //affichage des resultat des choix utilisateur
+    const displayResult = () => {
+        btnsParameters.forEach((btn) => {
+            if (
+                btn.classList.contains("btn-parameter1") &&
+                btn.classList.contains("toggle-button--active")
+            ) {
+                cardsContainer.classList.remove("hidden");
+            } else {
+                if (
+                    btn.classList.contains("btn-parameter1") &&
+                    !btn.classList.contains("toggle-button--active")
+                ) {
+                    cardsContainer.classList.add("hidden");
+                }
+            }
+            if (
+                btn.classList.contains("btn-parameter2") &&
+                btn.classList.contains("toggle-button--active")
+            ) {
+                arrayContainer.classList.remove("hidden");
+            } else {
+                if (
+                    btn.classList.contains("btn-parameter2") &&
+                    !btn.classList.contains("toggle-button--active")
+                ) {
+                    arrayContainer.classList.add("hidden");
+                }
+            }
+        });
+    };
 }

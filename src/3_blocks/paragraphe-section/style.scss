@@ -27,8 +27,8 @@
     .full-width img{
       width: 100%;
     }
-    .container{
-      padding: 0 var(--spacing-128);
+    &__content{
+      padding: 0 var(--spacing-64);
       img{
         /* border-radius: 8px;*/
       }
@@ -43,7 +43,7 @@
       li{
         list-style: disc;
         /*color:#002853;*/
-        padding:8px 0;
+        padding:0;
         margin-left: 20px;
       }
       .text-align-center {
